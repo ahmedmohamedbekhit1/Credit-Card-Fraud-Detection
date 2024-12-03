@@ -123,7 +123,7 @@ Before training, we visualize the class distribution of the dataset. As shown be
 ### Training Loss Curve
 The training loss curve shows the loss function decreasing over epochs, indicating that the model is learning.
 
-![Training Loss Curve](./images/training_loss_curve.png)
+![Training Loss Curve](/images/training_loss_curve.png)
 
 ### Confusion Matrix
 After training the model, we evaluate its performance using the confusion matrix. Here’s the confusion matrix that shows how the model performs on the test set:
@@ -134,12 +134,12 @@ Confusion Matrix (rows: actual, columns: predicted):
  [    2    96]]
 ```
 
-![Confusion Matrix Heatmap](./images/confusion_matrix.png)
+![Confusion Matrix Heatmap](/images/confusion_matrix.png)
 
 ### ROC Curve
 The ROC curve illustrates the model's ability to distinguish between fraudulent and non-fraudulent transactions. The area under the curve (AUC) provides insight into the overall model performance.
 
-![ROC Curve](./images/roc_curve.png)
+![ROC Curve](/images/roc_curve.png)
 
 ### Classification Report
 The classification report shows the precision, recall, and F1-score for both classes. Due to the class imbalance, the model achieves:
