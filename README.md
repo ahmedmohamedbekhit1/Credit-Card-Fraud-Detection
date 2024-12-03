@@ -118,7 +118,7 @@ The following visualizations are generated:
 ### Class Distribution
 Before training, we visualize the class distribution of the dataset. As shown below, there is a clear imbalance between fraudulent and non-fraudulent transactions.
 
-![Class Distribution Plot](/images/Class Distribution Plot.png)
+![Class Distribution Plot](/images/ClassDistributionPlot.png)
 
 ### Training Loss Curve
 The training loss curve shows the loss function decreasing over epochs, indicating that the model is learning.
