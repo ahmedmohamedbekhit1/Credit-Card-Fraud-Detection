@@ -37,14 +37,13 @@ for p in plt.gca().patches:
     plt.gca().annotate(f'{count} ({percentage})',
                        xy=(p.get_x() + p.get_width() / 2, count),
                        ha='center', va='bottom')
-
 plt.show()
 
 # Step 3: Prepare the data
 print("\n=== Step 3: Preparing the Data ===")
 X = df.drop('Class', axis=1).values
 y = df['Class'].values
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=1)
 
 scaler = StandardScaler()
 X_train_scaled = scaler.fit_transform(X_train)
@@ -52,7 +51,7 @@ X_test_scaled = scaler.transform(X_test)
 
 # Handle imbalance with SMOTE
 print("Applying SMOTE to balance the data...")
-smote = SMOTE(random_state=42)
+smote = SMOTE(random_state=1)
 X_train_resampled, y_train_resampled = smote.fit_resample(X_train_scaled, y_train)
 print(f"Resampled dataset size: {len(X_train_resampled)}")
 
