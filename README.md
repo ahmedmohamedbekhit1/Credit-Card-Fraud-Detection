@@ -153,7 +153,7 @@ The classification report shows the precision, recall, and F1-score for both cla
    macro avg       0.50      0.83      0.44     56962
 weighted avg       1.00      0.76      0.86     56962
 ```
-
+Accuracy: 0.7571
 ---
 
 ## License
