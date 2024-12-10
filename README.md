@@ -1,3 +1,6 @@
+Here’s the updated and full **README.md** file, complete with image embedding for a GitHub repository:
+
+---
 
 # Credit Card Fraud Detection using Neural Networks
 
@@ -5,11 +8,11 @@ This project implements a deep learning model to detect fraudulent credit card t
 
 ## Table of Contents
 
-1. [Installation](#installation)
-2. [Dataset](#dataset)
-3. [Usage](#usage)
-4. [Code Walkthrough](#code-walkthrough)
-5. [Results](#results)
+1. [Installation](#installation)  
+2. [Dataset](#dataset)  
+3. [Usage](#usage)  
+4. [Code Walkthrough](#code-walkthrough)  
+5. [Results](#results)  
 6. [License](#license)
 
 ---
@@ -118,7 +121,7 @@ The following visualizations are generated:
 ### Class Distribution
 Before training, we visualize the class distribution of the dataset. As shown below, there is a clear imbalance between fraudulent and non-fraudulent transactions.
 
-![Class Distribution Plot](/images/ClassDistributionPlot.png)
+![Class Distribution Plot](images/ClassDistributionPlot.png)
 
 ### Training Loss Curve
 The training loss curve shows the loss function decreasing over epochs, indicating that the model is learning.
@@ -126,40 +129,30 @@ The training loss curve shows the loss function decreasing over epochs, indicati
 ![Training Loss Curve](images/Training_Loss_Curve.png)
 
 ### Confusion Matrix
-After training the model, we evaluate its performance using the confusion matrix. Here’s the confusion matrix that shows how the model performs on the test set:
-
-```
-Confusion Matrix (rows: actual, columns: predicted):
-[[15406 41458]
- [    2    96]]
-```
+After training the model, we evaluate its performance using the confusion matrix:
 
 ![Confusion Matrix Heatmap](images/Confusion_Matrix_Heatmap.png)
 
 ### ROC Curve
-The ROC curve illustrates the model's ability to distinguish between fraudulent and non-fraudulent transactions. The area under the curve (AUC) provides insight into the overall model performance.
+The ROC curve illustrates the model's ability to distinguish between fraudulent and non-fraudulent transactions.
 
 ![ROC Curve](images/ROC_Curve.png)
 
 ### Classification Report
 The classification report shows the precision, recall, and F1-score for both classes. Due to the class imbalance, the model achieves:
-- **High recall** for fraudulent transactions (98%), but a **low precision** (0%).
-- **Overall accuracy** of **27.21%**, which is largely influenced by the class imbalance.
+- **High recall** for fraudulent transactions (91%), but a **low precision** for the same class (1%).
+- **Overall accuracy** of **75.71%**, which is largely influenced by the dominant non-fraudulent transactions.
 
 ```
               precision    recall  f1-score   support
 
-           0       1.00      0.27      0.43     56864
-           1       0.00      0.98      0.00        98
+           0       1.00      0.76      0.86     56864
+           1       0.01      0.91      0.01        98
 
-    accuracy                           0.27     56962
-   macro avg       0.50      0.63      0.22     56962
-weighted avg       1.00      0.27      0.43     56962
+    accuracy                           0.76     56962
+   macro avg       0.50      0.83      0.44     56962
+weighted avg       1.00      0.76      0.86     56962
 ```
-
-**Accuracy:** 0.2721
-
-This suggests the model is biased towards predicting non-fraudulent transactions, as expected with an imbalanced dataset.
 
 ---
 
